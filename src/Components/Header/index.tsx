@@ -9,6 +9,8 @@ const Header = () => {
     const {mode} = useAppSelector(s => s.ChildWork)
     const {favorite} = useAppSelector(s => s.FavoriteReducer)
     const navigate = useNavigate()
+    const {language} = useAppSelector(s => s.ChildWork)
+
 
     return (
         <div className="flex my-5 left-[15%]  fixed z-50 -top-2 bg-black/50 text-white px-10  py-2 rounded justify-between w-[70%] font-bold text-lg items-center">
@@ -25,8 +27,8 @@ const Header = () => {
                 </Link>
             </div>
             <select name="" id="" onChange={(e) => dispatch(getSelectedREC(e.target.value))} className="bg-transparent text-blue-500">
-                <option selected={true} value="en-US">en</option>
-                <option value="ru-RU">ru</option>
+                <option selected={language === "en-US"} value="en-US">en</option>
+                <option selected={language === "ru-RU"} value="ru-RU">ru</option>
             </select>
             <div>
                 <button onClick={() => dispatch(upDateMode(!mode))} className="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2  text-center  dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">mode</button>
