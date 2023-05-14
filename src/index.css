@@ -28,6 +28,16 @@ select {
     .containers {
         width: 90%;
     }
+    .movieTop {
+        flex-direction: column;
+    }
+    .w-\[90\%\] {
+        width: 73%;
+    }
+    .border {
+        border-width: 1px;
+        margin: 10px 0;
+    }
 }
 @media (max-width: 320px){
     .containers {
