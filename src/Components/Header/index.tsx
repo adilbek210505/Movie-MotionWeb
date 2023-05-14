@@ -13,7 +13,7 @@ const Header = () => {
 
 
     return (
-        <div className="flex my-5 left-[15%]  fixed z-50 -top-2 bg-black/50 text-white px-10  py-2 rounded justify-between w-[70%] font-bold text-lg items-center">
+        <div className="flex my-5 movieTop  left-[15%]  fixed z-50 -top-2 bg-black/50 text-white px-10  py-2 rounded justify-between w-[70%] font-bold text-lg items-center">
             <Link to={"/"}>
                 <img src={logo} alt="" className="rounded w-[70px]"/>
             </Link>
