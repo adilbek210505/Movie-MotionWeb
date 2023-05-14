@@ -2,10 +2,12 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {IChildWorkState} from "../../Types/ChildWorkTypes";
 
 
+const modes: any = localStorage.getItem("mode")
+const values: any = localStorage.getItem("value")
 const initialState: IChildWorkState = {
     value: "",
-    mode: false,
-    language: "en-US",
+    mode: JSON.parse(modes) || false,
+    language:  JSON.parse(values) || "en-US",
     upDate: false
 }
 

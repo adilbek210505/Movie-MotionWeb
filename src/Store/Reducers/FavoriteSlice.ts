@@ -2,8 +2,9 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {IFavoriteState} from "../../Types/FavoriteTypes";
 import {IPopular} from "../../Types/PopularType";
 
+const fav: any = localStorage.getItem("favorite")
 const  initialState: IFavoriteState = {
-    favorite: []
+    favorite: JSON.parse(fav) || []
 }
 export const FavoriteReducer = createSlice({
     name: "FAVORITE",
